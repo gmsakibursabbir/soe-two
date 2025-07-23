@@ -88,7 +88,7 @@ closeMobileBtn.addEventListener("click", () => {
 
 const servicesSwiper = new Swiper(".servicesSwiper", {
   slidesPerView: 1.2,
-  spaceBetween: 16,
+  spaceBetween: 12,
   loop: true,
   navigation: {
     nextEl: ".swiper-next",
@@ -109,25 +109,25 @@ const servicesSwiper = new Swiper(".servicesSwiper", {
 
 //dev
 const devsswiper = new Swiper(".devSwiper", {
-  slidesPerView: 1.2, // peeking right
-  spaceBetween: 12,
-  freeMode: false, // disable freeMode
-  loop: true, // disable loop to prevent duplication
-
+  slidesPerView: 2.2,
+  spaceBetween: 16,
+  loop: true,
   navigation: {
     nextEl: ".swiperdev-next",
     prevEl: ".swiperdev-prev",
   },
-
   breakpoints: {
     640: {
-      slidesPerView: 2.5,
+      slidesPerView: 1.1,
     },
     768: {
-      slidesPerView: 2.2,
+      slidesPerView: 1.2,
     },
     1024: {
-      slidesPerView: 2.2,
+      slidesPerView: 1.2, 
+    },
+    1280: {
+      slidesPerView: 2.2, 
     },
   },
 });
@@ -155,3 +155,27 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to match left spacing of the slider wrapper with the container
+// bg
+function setResponsiveGradient() {
+  const gradientEl = document.querySelector(".tecnologia-bg");
+  const width = window.innerWidth;
+
+  if (!gradientEl) return;
+
+  if (width < 576) {
+    gradientEl.style.background =
+      "linear-gradient(180deg, #3c8b84 -20.56%, #fefefd 50.63%)";
+  } else if (width < 768) {
+    gradientEl.style.background =
+      "linear-gradient(180deg, #3c8b84 -50%, #fefefd 90%)";
+  } else {
+    gradientEl.style.background =
+      "linear-gradient(180deg, #3c8b84 -32.56%, #fefefd 82.63%)";
+  }
+}
+
+// Run on page load
+setResponsiveGradient();
+
+// Run on window resize
+window.addEventListener("resize", setResponsiveGradient);

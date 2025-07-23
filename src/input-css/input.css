@@ -79,24 +79,21 @@ body {
 }
 
 /* Medium screens (Tablet) */
-@media (max-width: 768px) {
-  .tecnologia-bg {
-    background: linear-gradient(180deg, #3c8b84 -50%, #fefefd 90%);
-  }
-}
 @media (max-width: 576px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .tecnologia-bg {
-    background: linear-gradient(180deg, #3c8b84 -50%, #fefefd 99%);
-  }
 }
-@media (min-width: 769px) {
-  .tecnologia-bg {
-    background: linear-gradient(180deg, #3c8b84 -32.56%, #fefefd 82.63%);
-  }
+
+.tecnologia-bg-lg {
+  background: linear-gradient(180deg, #3c8b84 -32.56%, #fefefd 82.63%);
+}
+.tecnologia-bg-md {
+  background: linear-gradient(180deg, #3c8b84 -50%, #fefefd 90%);
+}
+.tecnologia-bg-sm {
+  background: linear-gradient(180deg, #3c8b84 -50%, #fefefd 99%);
 }
 
 .Bggradient {
