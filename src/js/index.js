@@ -121,10 +121,10 @@ const devsswiper = new Swiper(".devSwiper", {
       slidesPerView: 1.1,
     },
     768: {
-      slidesPerView: 1.2,
+      slidesPerView: 1.1,
     },
     1024: {
-      slidesPerView: 1.2, 
+      slidesPerView: 1.1, 
     },
     1280: {
       slidesPerView: 2.2, 
